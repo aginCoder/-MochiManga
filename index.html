@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MochiManga - thế giới truyện tranh và anime nổi tiếng với giao diện hoạt hình sinh động.">
+  <title>MochiManga | Thế giới truyện hoạt hình</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-loader" id="pageLoader"><div class="loader-mochi">♡</div><p>Đang mở cánh cửa truyện...</p></div>
+  <div class="petals" id="petals" aria-hidden="true"></div>
+  <div class="cursor-star" id="cursorStar" aria-hidden="true">✦</div>
+
+  <header class="header" id="header">
+    <a class="logo" href="#home"><span class="logo-face">◕‿◕</span><span>Mochi<span>Manga</span></span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Mở menu"><i></i><i></i><i></i></button>
+    <nav class="nav" id="nav">
+      <a class="active" href="#home">Trang chủ</a>
+      <a href="#popular">Truyện hay</a>
+      <a href="#genres">Thể loại</a>
+      <a href="#ranking">Xếp hạng</a>
+    </nav>
+    <div class="header-actions">
+      <button class="sound-btn" id="soundBtn" aria-label="Bật tắt âm thanh">♫</button>
+      <a class="mini-btn" href="#popular">Đọc ngay <span>→</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="sky" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="cloud cloud-1"><i></i><i></i><i></i></div>
+        <div class="cloud cloud-2"><i></i><i></i><i></i></div>
+        <div class="cloud cloud-3"><i></i><i></i><i></i></div>
+        <div class="hill hill-1"></div><div class="hill hill-2"></div>
+      </div>
+
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span>✿</span> THẾ GIỚI TRUYỆN TUYỆT VỜI</div>
+        <h1>Mỗi trang truyện là một <span>cuộc phiêu lưu</span> mới!</h1>
+        <p>Khám phá những bộ manga, anime và truyện hoạt hình được yêu thích trên khắp thế giới trong một không gian vui nhộn, đầy màu sắc.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#popular">Khám phá ngay <b>➜</b></a>
+          <button class="btn white" id="surpriseBtn"><span>✦</span> Chọn truyện bất ngờ</button>
+        </div>
+        <div class="hero-tags">
+          <span>🔥 Truyện hot mỗi ngày</span><span>🌸 Giao diện dễ thương</span><span>⚡ Tải dữ liệu tự động</span>
+        </div>
+      </div>
+
+      <div class="hero-art reveal" id="heroArt">
+        <div class="speech">Hôm nay đọc gì nhỉ? <span>♡</span></div>
+        <div class="character">
+          <div class="hair-back"></div><div class="ear left"></div><div class="ear right"></div>
+          <div class="face"><i class="eye left"></i><i class="eye right"></i><b class="mouth"></b><em class="blush left"></em><em class="blush right"></em></div>
+          <div class="hair-front"></div><div class="body"></div><div class="arm"></div><div class="book"><span>ANIME</span><i>★</i></div>
+        </div>
+        <div class="mascot"><div class="mascot-ear left"></div><div class="mascot-ear right"></div><div class="mascot-face">•ᴗ•</div></div>
+        <span class="spark s1">✦</span><span class="spark s2">✿</span><span class="spark s3">★</span>
+      </div>
+      <div class="wave" aria-hidden="true"></div>
+    </section>
+
+    <section class="section popular" id="popular">
+      <div class="section-title reveal">
+        <div><span class="kicker">BỘ SƯU TẬP TOÀN CẦU</span><h2>Truyện hay <mark>khắp thế giới</mark></h2></div>
+        <p>Tổng hợp những tác phẩm nổi tiếng từ Nhật Bản, Hàn Quốc, Trung Quốc và Âu Mỹ.</p>
+      </div>
+
+      <div class="toolbar reveal">
+        <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Tìm One Piece, Naruto, Solo Leveling..."></label>
+        <div class="filters" id="filters">
+          <button class="active" data-filter="all">Tất cả</button>
+          <button data-filter="japan">Nhật Bản</button>
+          <button data-filter="korea">Hàn Quốc</button>
+          <button data-filter="china">Trung Quốc</button>
+          <button data-filter="west">Âu Mỹ</button>
+        </div>
+      </div>
+
+      <div class="story-grid" id="storyGrid"></div>
+      <div class="load-more-wrap"><button class="btn white" id="loadMoreBtn">Xem thêm truyện <span>↓</span></button></div>
+      <div class="empty-state" id="emptyState"><span>૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა</span><h3>Chưa tìm thấy truyện phù hợp</h3><p>Thử một tên hoặc thể loại khác nhé!</p></div>
+    </section>
+
+    <section class="genre-section" id="genres">
+      <div class="section-title center reveal"><div><span class="kicker">CHỌN THEO TÂM TRẠNG</span><h2>Hôm nay bạn muốn đọc <mark>thể loại nào?</mark></h2></div></div>
+      <div class="genre-grid">
+        <button class="genre reveal" data-genre="action"><span>⚔️</span><b>Hành động</b><small>Những trận chiến bùng nổ</small></button>
+        <button class="genre reveal" data-genre="adventure"><span>🗺️</span><b>Phiêu lưu</b><small>Đi đến những vùng đất mới</small></button>
+        <button class="genre reveal" data-genre="fantasy"><span>🪄</span><b>Kỳ ảo</b><small>Phép thuật và điều kỳ diệu</small></button>
+        <button class="genre reveal" data-genre="romance"><span>💗</span><b>Tình cảm</b><small>Những rung động ngọt ngào</small></button>
+        <button class="genre reveal" data-genre="comedy"><span>😹</span><b>Hài hước</b><small>Cười vui quên lối về</small></button>
+        <button class="genre reveal" data-genre="sports"><span>🏐</span><b>Thể thao</b><small>Đam mê và đồng đội</small></button>
+      </div>
+    </section>
+
+    <section class="ranking-section" id="ranking">
+      <div class="ranking-card reveal">
+        <div class="ranking-copy"><span class="kicker">BẢNG XẾP HẠNG TUẦN</span><h2>Top truyện được yêu thích</h2><p>Những cái tên đang được cộng đồng độc giả quan tâm nhiều nhất.</p><button class="btn primary" id="refreshRank">Đổi bảng xếp hạng ↻</button></div>
+        <div class="ranking-list" id="rankingList"></div>
+      </div>
+      <div class="newsletter reveal">
+        <div class="mail-character">(づ｡◕‿‿◕｡)づ</div><div><span class="kicker">ĐỪNG BỎ LỠ</span><h2>Nhận truyện mới mỗi tuần!</h2><p>Đăng ký để nhận gợi ý truyện thú vị và cập nhật mới nhất.</p></div>
+        <form id="subscribeForm"><input type="email" placeholder="Email của bạn" required><button>Đăng ký 💌</button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="logo" href="#home"><span class="logo-face">◕‿◕</span><span>Mochi<span>Manga</span></span></a><p>Được làm bằng ♡ cho những người yêu truyện hoạt hình.</p><div class="social"><a href="#">f</a><a href="#">◎</a><a href="#">♪</a></div></footer>
+  <div class="story-modal" id="storyModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close-modal aria-label="Đóng">×</button>
+      <div class="modal-poster" id="modalCover"></div>
+      <div class="modal-content">
+        <div class="modal-badges" id="modalBadges"></div>
+        <h2 id="modalTitle">Tên truyện</h2>
+        <p class="modal-description" id="modalDescription"></p>
+        <div class="modal-meta" id="modalMeta"></div>
+        <div class="chapter-head"><div><span class="kicker">MỤC LỤC</span><h3>Danh sách chương</h3></div><div class="chapter-actions"><button id="importBtn">⇧ Nhập JSON</button><button id="followBtn">♡ Theo dõi</button></div></div>
+        <div class="chapter-list" id="chapterList"></div>
+      </div>
+    </article>
+  </div>
+  <div class="reader-modal" id="readerModal" aria-hidden="true">
+    <div class="reader-backdrop" data-close-reader></div>
+    <article class="reader-panel" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+      <header class="reader-header">
+        <button class="reader-back" data-close-reader>← Mục lục</button>
+        <div><small id="readerStory">Tên truyện</small><h2 id="readerTitle">Chương 1</h2></div>
+        <button class="reader-close" data-close-reader aria-label="Đóng">×</button>
+      </header>
+      <div class="reader-progress"><i id="readerProgress"></i></div>
+      <main class="reader-body" id="readerBody"></main>
+      <footer class="reader-nav">
+        <button id="prevChapter">← Chương trước</button>
+        <button id="chapterMenu">☰ Mục lục</button>
+        <button id="nextChapter">Chương sau →</button>
+      </footer>
+    </article>
+  </div>
+  <input id="jsonInput" type="file" accept="application/json,.json" hidden>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
