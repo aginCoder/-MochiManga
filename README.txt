@@ -1,11 +1,16 @@
-MOCHIMANGA - ANH BIA JPG CUC BO
+# MochiManga
 
-1. Mo thu muc bang Live Server hoac mo index.html.
-2. Tat ca anh bia dat trong: assets/covers/
-3. Ten anh phai viet thuong, khong dau, cach tu bang dau gach ngang va co duoi .jpg.
-4. Vi du:
-   One Piece -> assets/covers/one-piece.jpg
-   Dragon Ball -> assets/covers/dragon-ball.jpg
-   Hunter x Hunter -> assets/covers/hunter-x-hunter.jpg
-5. Khi khong tim thay anh, website tu dung assets/covers/default.jpg.
-6. Muon thay anh One Piece, chi can thay file one-piece.jpg bang anh JPG khac cung ten.
+MochiManga là một website đọc truyện được mình xây dựng bằng **HTML, CSS và JavaScript thuần**, tập trung vào trải nghiệm đơn giản, trực quan và dễ sử dụng.
+
+Website tổng hợp nhiều thể loại truyện nổi tiếng như **Manga, Manhwa, Manhua, Comic, Romance, Comedy, Horror** và **Fantasy**, đồng thời hỗ trợ tìm kiếm, phân loại và hiển thị ảnh bìa tự động theo tên truyện.
+
+## Tính năng
+
+* Hiển thị danh sách truyện theo từng thể loại.
+* Tìm kiếm truyện theo tên.
+* Giao diện responsive trên máy tính và điện thoại.
+* Tự động tải ảnh bìa theo tên truyện.
+* Tự động hiển thị ảnh mặc định nếu không tìm thấy ảnh bìa.
+* Dễ dàng mở rộng bằng cách thêm dữ liệu và ảnh mà không cần sửa code.
+
+Đây là một dự án cá nhân nhằm luyện tập JavaScript và xây dựng một website có cấu trúc rõ ràng, dễ bảo trì và dễ phát triển thêm trong tương lai.
